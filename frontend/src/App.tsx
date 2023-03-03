@@ -1,20 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 // Components
-import Contact from './components/Contact';
-import Events from './components/Events';
-import Login from './components/Login';
-import Member from './components/Member';
-import Messaging from './components/Messaging';
-import Network from './components/Network';
-import Resources from './components/Resources';
-import Surveys from './components/Surveys';
-import Visitor from './components/Visitor';
+import Contact from './pages/Contact';
+import Events from './pages/Events';
+import Login from './pages/Login';
+import Member from './pages/Member';
+import Messaging from './pages/Messaging';
+import Network from './pages/Network';
+import Resources from './pages/Resources';
+import Surveys from './pages/Surveys';
+import Visitor from './pages/Visitor';
 import NavBar from './components/NavBar';
-import UnitLogo from './images/unit_insignia.png'
-
 
 function App() {
   return (
@@ -39,20 +37,3 @@ function App() {
 }
 
 export default App;
-
-/*
-    <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Quiver App
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-*/
