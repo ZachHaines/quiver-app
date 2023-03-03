@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// Components
+// Pages
 import Contact from './pages/Contact';
 import Events from './pages/Events';
 import Login from './pages/Login';
@@ -13,6 +13,7 @@ import Resources from './pages/Resources';
 import Surveys from './pages/Surveys';
 import Visitor from './pages/Visitor';
 import NavBar from './components/NavBar';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/events" element={<Events/>} />
           <Route path="/surveys" element={<Surveys/>} />
           <Route path="/resources" element={<Resources/>} />
+          <Route path="/Profile" element={<Profile/>} />
         </Routes>
       </Router>
       <img src={logo} className="App-logo" alt="logo" />
