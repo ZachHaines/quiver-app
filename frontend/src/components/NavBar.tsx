@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import unitInsignia from '../images/unit_insignia_small.png';
 /* MUI Imports */
-import { AppBar, Toolbar, IconButton, Typography } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Button, Typography } from '@mui/material';
 import Box from '@mui/material/Box'
 import EventIcon from '@mui/icons-material/Event';
 import MessageIcon from '@mui/icons-material/Message';
@@ -12,58 +12,99 @@ import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
-
-
 const NavBar = () => {
+
+  const AppLogoTitle = () => {
+    return (
+      <>
+        <Link to='/'>
+          <IconButton size='small' edge='start' color='inherit' aria-label='logo'>
+            <img src={unitInsignia} style={{ height: "48px", width: 'auto' }} alt="SF Logo" />
+          </IconButton>
+        </Link>
+        <Box display='flex' flexGrow={1}>
+          <Link to='/' style={{ color: 'inherit', textDecoration: 'none' }}>
+            <StyledNavTitle>QUIVER</StyledNavTitle>
+          </Link>
+        </Box>
+      </>
+    )
+  };
+
+  const MemberNavLinks = () => {
+    return (
+      <>
+        <Typography variant='h6' component='div' style={{ padding: '0 32px', display: 'inline-flex' }}>
+          <StyledLink to="/network">
+            <PeopleIcon sx={{ fontSize: 32 }} />
+            My Network
+          </StyledLink>
+          <StyledLink to="/messaging">
+            <MessageIcon sx={{ fontSize: 32 }} />
+            Messaging
+          </StyledLink>
+          <StyledLink to="/events">
+            <EventIcon sx={{ fontSize: 32 }} />
+            Events
+          </StyledLink>
+          <StyledLink to="/surveys">
+            <PollIcon sx={{ fontSize: 32 }} />
+            Surveys
+          </StyledLink>
+          <StyledLink to="/resources">
+            <TravelExploreIcon sx={{ fontSize: 32 }} />
+            Resources
+          </StyledLink>
+        </Typography>
+        <Typography variant='h6' component='div' style={{ paddingLeft: '32px' }}>
+          <StyledLink to="/profile">
+            <AccountCircleIcon sx={{ fontSize: 32 }} />
+            Me
+          </StyledLink>
+        </Typography>
+      </>
+    )
+  };
+
+  const VisitorNavLinks = () => {
+    return (
+      <>
+        <Typography variant='h6' component='div' style={{ padding: '0 32px', display: 'inline-flex' }}>
+          <StyledLink to="/">
+            About 1st SFC(A)
+          </StyledLink>
+          <StyledLink to="/">
+            Family Programs
+          </StyledLink>
+          <StyledLink to="/">
+            The App
+          </StyledLink>
+          <StyledLink to="/surveys">
+            Resources
+          </StyledLink>
+          <StyledLink to="/contact">
+            Contact
+          </StyledLink>
+        </Typography>
+        <Typography variant='h6' component='div' style={{ paddingLeft: '32px' }}>
+          <Button variant='contained'>
+            Login
+          </Button>
+        </Typography>
+      </>
+    )
+  };
+
   return (
     <AppBar position='static' style={{ background: '#024407' }}>
-        
-          <Toolbar>
-            <Link to='/'>
-              <IconButton size='small' edge='start' color='inherit' aria-label='logo'>
-                <img src={unitInsignia} style={{height:"40px", width:'auto'}} alt="SF Logo" />
-              </IconButton>
-              </Link>
-            <Box display='flex' flexGrow={1}>
-              <Link to='/' style={{ color: 'inherit', textDecoration: 'none'}}>
-                <StyledNavTitle>QUIVER</StyledNavTitle>
-              </Link>
-            </Box>
-            <Typography variant='h5' component='div' style={{padding: '0 32px', display: 'inline-flex'}}>
-              <StyledLink to="/network">
-                <PeopleIcon/>
-                My Network
-              </StyledLink>
-              <StyledLink to="/messaging">
-                <MessageIcon />
-                Messaging
-              </StyledLink>
-              <StyledLink to="/events">
-                <EventIcon />
-                Events</StyledLink>
-              <StyledLink to="/surveys">
-                <PollIcon />
-                Surveys
-              </StyledLink>
-              <StyledLink to="/resources">
-                <TravelExploreIcon />
-                Resources
-              </StyledLink>    
-            </Typography>
-      
-              <Typography variant='h5' component='div' style={{padding: '0 8px 0 32px', display: 'inline-flex'}}>
-              <StyledLink to="/profile">
-                <AccountCircleIcon  />
-                Me
-              </StyledLink> 
-            </Typography>
-       
-          </Toolbar>
-      
+      <Toolbar>
+        <AppLogoTitle />
+        {/* <MemberNavLinks /> */}
+        <VisitorNavLinks />
+      </Toolbar>
     </AppBar>
   )
-
-}
+};
 
 export default NavBar;
 
@@ -83,12 +124,12 @@ const StyledNavTitle = styled.h1`
   const StyledLink = styled(Link)`
   color: inherit;
   font-weight: bold;
-  justify-content: center;
   text-decoration: none;
   text-shadow: 2px 2px 5px black;
   padding: 0 24px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   &:active {
     text-shadow: none;
     font-weight: normal;

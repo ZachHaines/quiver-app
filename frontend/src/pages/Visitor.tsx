@@ -1,10 +1,13 @@
+import HeroFrame from "../components/HeroFrame";
+
 
 const Visitor = () => {
   
   return (
-    <h1>Visitor Home Page</h1>
+    <>
+      <HeroFrame />
+    </>
   )
-
-}
+};
 
 export default Visitor;
