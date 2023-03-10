@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import heroImage from '../images/soldier-silhouette.png'
+import heroImage from '../../images/soldier-silhouette.png'
 import { Typography } from '@mui/material'
 
 
@@ -10,7 +10,7 @@ const HeroFrame = () => {
       <StyledBackground>
         <img src={heroImage} height='640px' width='100%' alt="Hero Image" />
         <StyledHeader variant='h3'>
-          Special Operations Begins & Ends With Family
+          "We Recruit Soldiers — We Retain Families"
         </StyledHeader>
         <StyledSubHeader variant='h4' >
           Quiver is 1st SFC(A)’s official app for connecting service members and family members to resources and events.

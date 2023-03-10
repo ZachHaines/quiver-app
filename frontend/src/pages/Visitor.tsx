@@ -1,4 +1,5 @@
-import HeroFrame from "../components/HeroFrame";
+import HeroFrame from "../components/visitorPage/HeroFrame";
+import AboutUnit from "../components/visitorPage/AboutUnit";
 
 
 const Visitor = () => {
@@ -6,6 +7,7 @@ const Visitor = () => {
   return (
     <>
       <HeroFrame />
+      <AboutUnit />
     </>
   )
 };
