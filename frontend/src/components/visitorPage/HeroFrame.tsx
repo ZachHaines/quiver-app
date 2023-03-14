@@ -10,10 +10,11 @@ const HeroFrame = () => {
       <StyledBackground>
         <img src={heroImage} height='640px' width='100%' alt="Hero Image" />
         <StyledHeader variant='h3'>
-          "We Recruit Soldiers — We Retain Families"
+          <em>"We Recruit Soldiers — We Retain Families"</em>
         </StyledHeader>
         <StyledSubHeader variant='h4' >
-          Quiver is 1st SFC(A)’s official app for connecting service members and family members to resources and events.
+          Quiver is 1st SFC(A)’s official app for connecting service members 
+          and family members to resources and events.
         </StyledSubHeader>
       </StyledBackground>
     </>

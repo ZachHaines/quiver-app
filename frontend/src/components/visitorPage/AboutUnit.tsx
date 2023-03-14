@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import heroImage from '../../images/soldier-silhouette.png'
 import { Typography } from '@mui/material'
 import logo from '../../images/1SFC-logo-new.png'
 
@@ -13,8 +12,6 @@ const AboutUnit = () => {
           About 1st Special Forces Command (Airborne)
         </StyledHeader>
         <StyledImage src={logo} />
-        <body>
-
         <StyledSubHeader variant='h4'>
           Our Vision
         </StyledSubHeader>
@@ -25,30 +22,14 @@ const AboutUnit = () => {
           Our Mission
         </StyledSubHeader>
         <StyledBody variant='h5'>
-          1st Special Forces Command (Airborne) trains, mans, and equips
-          Special Operations Forces Soldiers & units to conduct special
-          operations worldwide in support of GCC, U.S. Ambassador and the
-          Nation’s priorities. On order, 1st Special Forces Command (Airborne)
-          deploys a Special Operations Headquarters to conduct Mission Command
-          of Special Operations, Conventional, Joint, and/or Coalition Forces
-          anywhere in the world in support of GCC, U.S. Ambassador and the
-          Nation’s priorities.
+          1st Special Forces Command (Airborne) trains, mans, and equips Special Operations Forces Soldiers & units to conduct special operations worldwide in support of GCC, U.S. Ambassador and the Nation’s priorities. On order, 1st Special Forces Command (Airborne) deploys a Special Operations Headquarters to conduct Mission Command of Special Operations, Conventional, Joint, and/or Coalition Forces anywhere in the world in support of GCC, U.S. Ambassador and the Nation’s priorities.
         </StyledBody>
         <StyledSubHeader variant='h4'>
           Our Culture
         </StyledSubHeader>
         <StyledBody variant='h5'>
-          Our culture enables everything we do, and is defined through our five
-          organizational values. <strong>Excellence</strong> is the relentless 
-          pursuit of mastery in our craft from the individual to the 
-          organization level. <strong>Commitment</strong> is our unwavering 
-          dedication to our <strong>Families</strong>, the Team, and the 
-          Nation. <strong>Accountability</strong> is understanding, 
-          internalizing and enforcing standards. <strong>Trust</strong> is our 
-          growth and development using decentralized leadership model to 
-          encourage discipline initiative at the lowest level.
+          Our culture enables everything we do, and is defined through our five organizational values. <strong>Excellence</strong> is the relentless  pursuit of mastery in our craft from the individual to the organization level. <strong>Commitment</strong> is our unwavering  dedication to our <strong>Families</strong>, the Team, and the  Nation. <strong>Accountability</strong> is understanding internalizing and enforcing standards. <strong>Trust</strong> is our growth and development using decentralized leadership model to encourage discipline initiative at the lowest level.
         </StyledBody>
-        </body>
       </StyledBackground>
     </>
   )
@@ -57,7 +38,7 @@ const AboutUnit = () => {
 export default AboutUnit;
 
 const StyledBackground = styled.div`
-  background-color: #A8A9AD;
+  background-color: white;
   padding: 48px;
 `;
 
