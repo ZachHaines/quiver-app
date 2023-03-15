@@ -1,17 +1,21 @@
 import styled from 'styled-components';
-import { 
+import {
   Button,
-  Card, 
+  Card,
   CardActions,
-  CardContent, 
-  Grid, 
-  Typography 
+  CardContent,
+  Grid,
+  Typography
 } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import PhoneIcon from '@mui/icons-material/Phone';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { Link } from 'react-router-dom';
+import PublicIcon from '@mui/icons-material/Public';
+import gbLogo from '../../images/resourceLogos/gbf-logo.png';
+import sowfLogo from '../../images/resourceLogos/sowf-logo.png';
+import msofcLogo from '../../images/resourceLogos/msofc-logo.png';
+import wwpLogo from '../../images/resourceLogos/wwp-logo.png';
 
 
 const GeneralResources = () => {
@@ -35,13 +39,14 @@ const GeneralResources = () => {
                 sx={{
                   width: '360px',
                   height: '400px',
-                  backgroundColor: '#F3F3F3',
+                  backgroundColor: 'white',
                   borderRadius: '24px',
                   marginBottom: '32px'
                 }}
               >
-                <CardContent>
 
+                <CardContent>
+                  <img src={el.image} height='64px' width='auto' />
                   <StyledSubHeader variant='h5'>
                     {el.name}
                   </StyledSubHeader>
@@ -57,20 +62,24 @@ const GeneralResources = () => {
                     <PhoneIcon sx={{ padding: '8px 8px 8px 0' }} />
                     {el.phone}
                   </Grid>
+                  <Grid container direction='row' alignItems='center'>
+                    <PublicIcon sx={{ padding: '8px 8px 8px 0' }} />
+                    <a href={el.website}>Website</a>
+                  </Grid>
 
                   <Grid container direction='row' alignItems='center'>
                     <EmailIcon sx={{ padding: '8px 8px 8px 0' }} />
-                    <a href={el.email}>{el.email}</a>
+                    <a href={el.email}>Email</a>
                   </Grid>
 
                   <Grid container direction='row' alignItems='center'>
                     <FacebookIcon sx={{ padding: '8px 8px 8px 0' }} />
-                    <a href={el.facebook}>{el.facebook} </a>
+                    <a href={el.facebook}>Facebook </a>
                   </Grid>
 
                   <Grid container direction='row' alignItems='center'>
                     <TwitterIcon sx={{ padding: '8px 8px 8px 0' }} />
-                    <a href='https://www.google.com'>{el.twitter}</a>
+                    <a href='https://www.google.com'>Twitter</a>
                   </Grid>
 
                 </CardContent>
@@ -87,7 +96,7 @@ const GeneralResources = () => {
 export default GeneralResources;
 
 const StyledBackground = styled.div`
-  background-color: white;
+  background-color: #F3F3F3;
   padding: 48px;
 `;
 
@@ -99,8 +108,7 @@ const StyledHeader = styled(Typography)`
 const StyledSubHeader = styled(Typography)`
   color: #024407;  
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 8px;
+  padding: 8px 0;
 `;
 
 const StyledBody = styled(Typography)`
@@ -119,64 +127,76 @@ const StyledImage = styled.img`
 
 const resources = [
   {
-    name: 'Green Beret Foundation', 
+    name: 'Green Beret Foundation',
     location: 'Location Template',
+    image: gbLogo,
+    phone: '910-396-0001',
+    email: 'emailresourcename@gmail.com',
+    website: 'https://greenberetfoundation.org/',
+    facebook: 'https://www.facebook.com/GreenBeretFoundation/',
+    twitter: 'twitter link',
+  },
+  {
+    name: 'Special Operations Warrior Foundation',
+    location: 'Location Template',
+    image: sowfLogo,
+    phone: '910-396-0001',
+    email: 'emailresourcename@gmail.com',
+    website: 'https://specialops.org/',
+    facebook: 'facebook link',
+    twitter: 'twitter link',
+  },
+  {
+    name: 'Wounded Warrior Project',
+    location: 'Location Template',
+    image: wwpLogo,
+    phone: '910-396-0001',
+    email: 'emailresourcename@gmail.com',
+    website: 'https://www.woundedwarriorproject.org/',
+    facebook: 'facebook link',
+    twitter: 'twitter link',
+  },
+  {
+    name: 'Military Special Operations Family Collaborative',
+    location: 'Location Template',
+    image: msofcLogo,
+    phone: '910-396-0001',
+    email: 'emailresourcename@gmail.com',
+    website: 'https://msofc.org/',
+    facebook: 'facebook link',
+    twitter: 'twitter link',
+  },
+  {
+    name: 'Company C',
+    location: 'Location Template',
+    image: '../../images/resourceLogos/sowf-logo.png',
     phone: '910-396-0001',
     email: 'emailresourcename@gmail.com',
     facebook: 'facebook link',
     twitter: 'twitter link',
   },
   {
-    name: 'Wounded Warrior Project', 
+    name: 'Company D',
     location: 'Location Template',
+    image: '../../images/resourceLogos/sowf-logo.png',
     phone: '910-396-0001',
     email: 'emailresourcename@gmail.com',
     facebook: 'facebook link',
     twitter: 'twitter link',
   },
   {
-    name: 'Company A', 
+    name: 'Company E',
     location: 'Location Template',
+    image: '../../images/resourceLogos/sowf-logo.png',
     phone: '910-396-0001',
     email: 'emailresourcename@gmail.com',
     facebook: 'facebook link',
     twitter: 'twitter link',
   },
   {
-    name: 'Company B', 
+    name: 'Company F',
     location: 'Location Template',
-    phone: '910-396-0001',
-    email: 'emailresourcename@gmail.com',
-    facebook: 'facebook link',
-    twitter: 'twitter link',
-  },
-  {
-    name: 'Company C', 
-    location: 'Location Template',
-    phone: '910-396-0001',
-    email: 'emailresourcename@gmail.com',
-    facebook: 'facebook link',
-    twitter: 'twitter link',
-  },
-  {
-    name: 'Company D', 
-    location: 'Location Template',
-    phone: '910-396-0001',
-    email: 'emailresourcename@gmail.com',
-    facebook: 'facebook link',
-    twitter: 'twitter link',
-  },
-  {
-    name: 'Company E', 
-    location: 'Location Template',
-    phone: '910-396-0001',
-    email: 'emailresourcename@gmail.com',
-    facebook: 'facebook link',
-    twitter: 'twitter link',
-  },
-  {
-    name: 'Company F', 
-    location: 'Location Template',
+    image: '../../images/resourceLogos/sowf-logo.png',
     phone: '910-396-0001',
     email: 'emailresourcename@gmail.com',
     facebook: 'facebook link',
