@@ -8,7 +8,7 @@ const AboutUnit = () => {
   return (
     <section id='about-unit'>
       <StyledBackground>
-        <StyledHeader variant='h2' id='aboutUnit'>
+        <StyledHeader variant='h2'>
           About 1st Special Forces Command (Airborne)
         </StyledHeader>
         <StyledImage src={logo} />

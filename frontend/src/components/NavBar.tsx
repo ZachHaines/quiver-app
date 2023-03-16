@@ -78,8 +78,8 @@ const NavBar = () => {
           component='div' 
           style={{ padding: '0 32px', display: 'inline-flex' }}
         >
-          <StyledHashLink smooth to="/#top">
-            Top
+          <StyledHashLink smooth to='#landing'>
+            Home
           </StyledHashLink>
           <StyledHashLink smooth to="/#about-unit">
             About 1st SFC(A)

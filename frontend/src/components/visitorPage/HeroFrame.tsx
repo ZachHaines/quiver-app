@@ -7,7 +7,7 @@ import { Typography } from '@mui/material'
 const HeroFrame = () => {
   
   return (
-    <section id='top'>
+    <section id='landing'>
       <StyledBackground>
         <StyledImg src={heroImage} alt="Hero Image" />
         <StyledHeader variant='h3'>
