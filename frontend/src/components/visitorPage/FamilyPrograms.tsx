@@ -1,20 +1,20 @@
 import styled from 'styled-components';
-import { 
+import { useNavigate } from 'react-router-dom';
+import {
   Button,
-  Card, 
-  CardActions,
-  CardContent, 
-  Grid, 
-  Typography 
+  Card,
+  CardContent,
+  Grid,
+  Typography
 } from '@mui/material';
-import capitolGroupPhoto from '../../images/capitol_group.jpg';
-import jfkWreathLayingPhoto from '../../images/jfk_wreath_laying.jpg'
-
-
+import leftImage from '../../images/capitol_group.jpg';
+import rightImage from '../../images/biden.jpg';
+// import rightImage from '../../images/jfk_wreath_laying.jpg'
 
 const FamilyPrograms = () => {
+  const nav = useNavigate();
   return (
-    <>
+    <section id='family-programs'>
       <StyledBackground>
         <Grid
           container
@@ -30,10 +30,10 @@ const FamilyPrograms = () => {
             alignItems='center'
           >
             <Grid item>
-              <StyledImage src={capitolGroupPhoto} />
+              <StyledImage src={leftImage} />
             </Grid>
             <Grid item>
-              <StyledImage src={jfkWreathLayingPhoto} />
+              <StyledImage src={rightImage} />
             </Grid>
           </Grid>
           <StyledCard raised={true} >
@@ -44,30 +44,30 @@ const FamilyPrograms = () => {
               <StyledBody variant='h5'>
                 <ul>
                   <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget risus porttitor, condimentum nisl in, suscipit enim.
+                    <strong>Who We Are:  </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget risus porttitor, condimentum nisl in, suscipit enim.
                   </li>
                   <li>
-                    Donec ornare pulvinar nisi, tristique blandit lacus rhoncus vitae.
+                    <strong>What We Do:  </strong>Donec ornare pulvinar nisi, tristique blandit lacus rhoncus vitae. Curabitur in pretium nunc.
                   </li>
                   <li>
-                    Pellentesque rhoncus arcu lacus, et fermentum mauris ornare quis.
+                    <strong>Why We Do It:  </strong>Pellentesque rhoncus arcu lacus, et fermentum mauris ornare quis, ac accumsan tellus tincidunt eu.
                   </li>
                   <li>
-                    Phasellus pellentesque metus vitae accumsan vestibulum. Nulla facilisi. Curabitur in pretium nunc. In consequat ipsum tortor, ac accumsan tellus tincidunt eu.
+                    <strong>Who We're For:  </strong>Phasellus pellentesque metus vitae accumsan vestibulum. Nulla facilisi. Curabitur in pretium nunc. In consequat ipsum tortor.
                   </li>
                   <li>
-                    In vel arcu mollis, vehicula leo ut, viverra odio. Cras rhoncus iaculis dui, eget.
+                    <strong>How To Join:  </strong>In vel arcu mollis, vehicula leo ut, viverra odio. Cras rhoncus iaculis dui, eget.
                   </li>
                 </ul>
               </StyledBody>
-              <Button variant="contained" color='success'>
-                Join Now!
-              </Button>
+                <Button onClick={()=> nav('/login')} variant="contained" color='success'>
+                  Join Now!
+                </Button>
             </CardContent>
           </StyledCard>
         </Grid>
       </StyledBackground>
-    </>
+    </section>
   )
 };
 

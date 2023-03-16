@@ -1,18 +1,19 @@
 import styled from 'styled-components';
 import ResourceCards from '../ResourceCards';
-/* MUI Imports */
 import { Typography } from '@mui/material';
-import { generalResources } from '../../sampleData';
+import { generalResources } from '../../mockData';
 
 
 const GeneralResources = () => {
   return (
-    <StyledBackground>
-      <StyledHeader variant='h2'>
-        Family Programs General Resources
-      </StyledHeader>
-      {ResourceCards(generalResources)}
-    </StyledBackground>
+    <section id='resources'>
+      <StyledBackground>
+        <StyledHeader variant='h2'>
+          Family Programs General Resources
+        </StyledHeader>
+        {ResourceCards(generalResources)}
+      </StyledBackground>
+    </section>
   )
 };
 
@@ -25,5 +26,5 @@ const StyledBackground = styled.div`
 
 const StyledHeader = styled(Typography)`
   color: #024407;
-  padding-bottom: 32px;
+  padding: 32px;
 `;

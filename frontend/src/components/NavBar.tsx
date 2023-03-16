@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components'
 import unitInsignia from '../images/unit_insignia_small.png';
 /* MUI Imports */
@@ -13,6 +14,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
 const NavBar = () => {
+  const nav = useNavigate();
 
   const AppLogoTitle = () => {
     return (
@@ -23,7 +25,9 @@ const NavBar = () => {
           </IconButton>
         </Link>
         <Box display='flex' flexGrow={1}>
-          <Link to='/' style={{ color: 'inherit', textDecoration: 'none' }}>
+          <Link to='/' 
+            style={{ color: 'inherit', textDecoration: 'none' }}
+          >
             <StyledNavTitle>QUIVER</StyledNavTitle>
           </Link>
         </Box>
@@ -69,25 +73,32 @@ const NavBar = () => {
   const VisitorNavLinks = () => {
     return (
       <>
-        <Typography variant='h6' component='div' style={{ padding: '0 32px', display: 'inline-flex' }}>
-          <StyledLink to="/">
+        <Typography 
+          variant='h6' 
+          component='div' 
+          style={{ padding: '0 32px', display: 'inline-flex' }}
+        >
+          <StyledHashLink smooth to="/#top">
+            Top
+          </StyledHashLink>
+          <StyledHashLink smooth to="/#about-unit">
             About 1st SFC(A)
-          </StyledLink>
-          <StyledLink to="/">
+          </StyledHashLink>
+          <StyledHashLink smooth to="/#family-programs">
             Family Programs
-          </StyledLink>
-          <StyledLink to="/">
+          </StyledHashLink>
+          <StyledHashLink smooth to="/#about-quiver">
             The App
-          </StyledLink>
-          <StyledLink to="/surveys">
+          </StyledHashLink>
+          <StyledHashLink smooth to="/#resources">
             Resources
-          </StyledLink>
-          <StyledLink to="/contact">
+          </StyledHashLink>
+          <StyledHashLink smooth to="/#contact">
             Contact
-          </StyledLink>
+          </StyledHashLink>
         </Typography>
         <Typography variant='h6' component='div' style={{ paddingLeft: '32px' }}>
-          <Button variant='contained'>
+          <Button variant='contained' onClick={()=> nav('/login')}>
             Login
           </Button>
         </Typography>
@@ -96,7 +107,10 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position='static' style={{ background: '#024407' }}>
+    <AppBar
+      id='top'
+      position='sticky'
+      style={{ background: '#024407' }}>
       <Toolbar>
         <AppLogoTitle />
         {/* <MemberNavLinks /> */}
@@ -120,8 +134,26 @@ const StyledNavTitle = styled.h1`
     color: #ECD592;
   }
   `;
-  
-  const StyledLink = styled(Link)`
+
+const StyledLink = styled(Link)`
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 2px 2px 5px black;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:active {
+    text-shadow: none;
+    font-weight: normal;
+  }
+  &:hover {
+    color: #ECD592;
+  }
+`;
+
+const StyledHashLink = styled(HashLink)`
   color: inherit;
   font-weight: bold;
   text-decoration: none;

@@ -6,9 +6,9 @@ import logo from '../../images/1SFC-logo-new.png'
 const AboutUnit = () => {
 
   return (
-    <>
+    <section id='about-unit'>
       <StyledBackground>
-        <StyledHeader variant='h2'>
+        <StyledHeader variant='h2' id='aboutUnit'>
           About 1st Special Forces Command (Airborne)
         </StyledHeader>
         <StyledImage src={logo} />
@@ -31,7 +31,7 @@ const AboutUnit = () => {
           Our culture enables everything we do, and is defined through our five organizational values. <strong>Excellence</strong> is the relentless  pursuit of mastery in our craft from the individual to the organization level. <strong>Commitment</strong> is our unwavering  dedication to our <strong>Families</strong>, the Team, and the  Nation. <strong>Accountability</strong> is understanding internalizing and enforcing standards. <strong>Trust</strong> is our growth and development using decentralized leadership model to encourage discipline initiative at the lowest level.
         </StyledBody>
       </StyledBackground>
-    </>
+    </section>
   )
 };
 
@@ -44,7 +44,7 @@ const StyledBackground = styled.div`
 
 const StyledHeader = styled(Typography)`
   color: #024407;
-  padding-bottom: 32px;
+  padding: 32px;
 `;
 
 const StyledSubHeader = styled(Typography)`

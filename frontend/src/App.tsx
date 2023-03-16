@@ -1,7 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Pages
 import Contact from './pages/Contact';
 import Events from './pages/Events';
@@ -33,7 +32,7 @@ function App() {
           <Route path="/Profile" element={<Profile/>} />
         </Routes>
       </Router>
-      <img src={logo} className="App-logo" alt="logo" />
+      {/* <img src={logo} className="App-logo" alt="logo" /> */}
     </div>
   );
 }
