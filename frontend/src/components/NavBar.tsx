@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components'
-import unitInsignia from '../images/unit_insignia_small.png';
+import unitInsignia from '../images/unitLogos/unit_insignia_small.png';
 /* MUI Imports */
 import { AppBar, Toolbar, IconButton, Button, Typography } from '@mui/material';
 import Box from '@mui/material/Box'
@@ -25,7 +25,7 @@ const NavBar = () => {
           </IconButton>
         </Link>
         <Box display='flex' flexGrow={1}>
-          <Link to='/' 
+          <Link to='/'
             style={{ color: 'inherit', textDecoration: 'none' }}
           >
             <StyledNavTitle>QUIVER</StyledNavTitle>
@@ -73,9 +73,9 @@ const NavBar = () => {
   const VisitorNavLinks = () => {
     return (
       <>
-        <Typography 
-          variant='h6' 
-          component='div' 
+        <Typography
+          variant='h6'
+          component='div'
           style={{ padding: '0 32px', display: 'inline-flex' }}
         >
           <StyledHashLink smooth to='#landing'>
@@ -93,12 +93,12 @@ const NavBar = () => {
           <StyledHashLink smooth to="/#resources">
             Resources
           </StyledHashLink>
-          <StyledHashLink smooth to="/#contact">
+          <StyledLink to="/contact">
             Contact
-          </StyledHashLink>
+          </StyledLink>
         </Typography>
         <Typography variant='h6' component='div' style={{ paddingLeft: '32px' }}>
-          <Button variant='contained' onClick={()=> nav('/login')}>
+          <Button variant='contained' onClick={() => nav('/login')}>
             Login
           </Button>
         </Typography>
