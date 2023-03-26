@@ -18,10 +18,8 @@ const  InputField = (props: any) => {
       value={props.value}
       onChange={props.onChange}
     
-
       InputLabelProps={{
-        sx: {color: '#444444'}
-        
+        sx: {color: '#444444'}    
       }}
 
       inputProps={{

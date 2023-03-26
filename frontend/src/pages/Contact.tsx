@@ -58,6 +58,7 @@ const Contact = () => {
             backgroundColor: '#1F1F22',
             borderRadius: '24px',
             margin: '48px',
+            // marginBottom: '150px'
           }}
         >
           <CardContent sx={{ float: 'Left' }}>
@@ -145,6 +146,7 @@ export default Contact;
 const StyledBackground = styled.div`
   background-color: #242D34;
   padding-top: 0;
+  height: 100vh;
 `;
 
 const StyledHeader = styled.h2`
