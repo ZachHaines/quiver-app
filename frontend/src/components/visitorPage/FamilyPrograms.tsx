@@ -7,8 +7,8 @@ import {
   Grid,
   Typography
 } from '@mui/material';
-import leftImage from '../../images/capitol_group.jpg';
-import rightImage from '../../images/biden.jpg';
+import leftImage from '../../images/eventPhotos/capitol_group.jpg';
+import rightImage from '../../images/eventPhotos/biden.jpg';
 // import rightImage from '../../images/jfk_wreath_laying.jpg'
 
 const FamilyPrograms = () => {

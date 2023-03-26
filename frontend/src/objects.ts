@@ -1,5 +1,5 @@
 /* Types */
-import { ResourceCard } from './types';
+import { ContactField, ResourceCard } from './types';
 /* Images */
 import gbLogo from './images/resourceLogos/gbf_logo.png';
 import sowfLogo from './images/resourceLogos/sowf_logo.png';
@@ -7,6 +7,60 @@ import msofcLogo from './images/resourceLogos/msofc_logo.png';
 import wwpLogo from './images/resourceLogos/wwp_logo.png';
 import oneSourceLogo from './images/resourceLogos/one_source_logo.png';
 import blueGlobeIcon from './images/resourceLogos/blue_globe_icon.png';
+
+export enum ContactEnum {
+  First = 1,
+  Last,
+  Email,
+  Phone,
+  Org,
+  Msg,
+};
+
+export const ContactForm: ContactField[] = [
+  {
+    label: 'First Name',
+    id: 'first-name-field',
+    fieldNum: ContactEnum.First,
+    multiline: false,
+    rows: 1
+  },
+  {
+    label: 'Last Name',
+    id: 'last-name-field',
+    fieldNum: ContactEnum.Last,
+    multiline: false,
+    rows: 1
+  },
+  {
+    label: 'Email Address',
+    id: 'email-field',
+    fieldNum: ContactEnum.Email,
+    multiline: false,
+    rows: 1
+  },
+  {
+    label: 'Phone Number',
+    id: 'phone-field',
+    fieldNum: ContactEnum.Phone,
+    multiline: false,
+    rows: 1
+  },
+  {
+    label: 'Organization / Unit',
+    id: 'org-field',
+    fieldNum: ContactEnum.Org,
+    multiline: false,
+    rows: 1
+  },
+  {
+    label: 'Message...',
+    id: 'msg-field',
+    fieldNum: ContactEnum.Msg,
+    multiline: true,
+    rows: 4
+  }
+];
 
 
 export const generalResources: ResourceCard[] = [

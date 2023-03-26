@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ResourceCards from '../ResourceCards';
 import { Typography } from '@mui/material';
-import { generalResources } from '../../mockData';
+import { generalResources } from '../../objects';
 
 
 const GeneralResources = () => {

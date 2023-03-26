@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 // import heroImage from '../../images/soldier-silhouette.png';
-import heroImage from '../../images/jfk_wreath_laying.jpg';
+import heroImage from '../../images/eventPhotos/jfk_wreath_laying.jpg';
 import { Typography } from '@mui/material'
 
 

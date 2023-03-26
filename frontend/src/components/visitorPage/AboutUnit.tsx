@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Typography } from '@mui/material'
-import logo from '../../images/1SFC-logo-new.png'
+import logo from '../../images/unitLogos/1SFC-logo-new.png'
 
 
 const AboutUnit = () => {
